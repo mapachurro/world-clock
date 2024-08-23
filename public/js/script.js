@@ -30,8 +30,6 @@ const timezones = [
     { label: 'Australia/Hobart', value: 'Australia/Hobart', name: 'Hobart, Australia' }
     // You can add more time zones here as needed
 ];
-
-
     function updateTime(clockElement, timezone) {
         const date = new Date();
         const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: timezone };
