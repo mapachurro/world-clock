@@ -1,0 +1,122 @@
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<header>
+    <h1>Consensys Team Time</h1>
+</header>
+
+
+<div class="clock-container" id="clockContainer">
+    <!-- Clock cards will be added here dynamically -->
+ </div>
+
+ <script>
+    const timezones = [
+        { label: 'UTC', value: 'UTC', name: 'Coordinated Universal Time' },
+        { label: 'America/New_York', value: 'America/New_York', name: 'New York (Eastern)' },
+        { label: 'Europe/London', value: 'Europe/London', name: 'London' },
+        { label: 'Asia/Tokyo', value: 'Asia/Tokyo', name: 'Tokyo' },
+        // Add more timezones here
+        { label: 'Australia/Sydney', value: 'Australia/Sydney', name: 'Sydney' },
+        { label: 'Europe/Paris', value: 'Europe/Paris', name: 'Paris' },
+        // A more extensive list would include all timezones with their corresponding UTC offsets
+    ];
+
+    function updateTime(clockElement, timezone) {
+        const date = new Date();
+        const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: timezone };
+        const timeString = date.toLocaleTimeString([], options);
+        clockElement.innerText = timeString;
+    }
+
+    function addClock(timezone = 'UTC') {
+        const clockContainer = document.getElementById('clockContainer');
+
+        if (!clockContainer) {
+            console.error('Clock container not found!');
+            return;
+        }
+
+        const clockCard = document.createElement('div');
+        clockCard.className = 'card clock-card';
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+
+        const timeDisplay = document.createElement('div');
+        timeDisplay.className = 'time-display';
+        timeDisplay.innerText = 'Loading...';
+        cardBody.appendChild(timeDisplay);
+
+        const timeZoneSelector = document.createElement('select');
+        timeZoneSelector.className = 'form-select';
+        timezones.forEach(tz => {
+            const option = document.createElement('option');
+            option.value = tz.value;
+            option.innerText = `${tz.label} (${tz.name})`;
+            timeZoneSelector.appendChild(option);
+        });
+        timeZoneSelector.value = timezone;
+        cardBody.appendChild(timeZoneSelector);
+
+        const timezoneName = document.createElement('div');
+        timezoneName.className = 'timezone-name';
+        timezoneName.innerText = timezones.find(tz => tz.value === timezone).name;
+        cardBody.appendChild(timezoneName);
+
+        timeZoneSelector.addEventListener('change', () => {
+            updateTime(timeDisplay, timeZoneSelector.value);
+            timezoneName.innerText = timezones.find(tz => tz.value === timeZoneSelector.value).name;
+        });
+
+        const removeButton = document.createElement('button');
+        removeButton.className = 'btn btn-remove';
+        removeButton.innerText = 'Remove';
+        removeButton.addEventListener('click', () => {
+            clockContainer.removeChild(clockCard);
+        });
+        cardBody.appendChild(removeButton);
+
+        clockCard.appendChild(cardBody);
+
+        const addClockElement = document.querySelector('.add-clock');
+
+        if (addClockElement && addClockElement.parentNode) {
+            clockContainer.insertBefore(clockCard, addClockElement.parentNode);
+        } else {
+            clockContainer.appendChild(clockCard);
+        }
+
+        setInterval(() => updateTime(timeDisplay, timeZoneSelector.value), 1000);
+        updateTime(timeDisplay, timezone);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        addClock();
+        addClock();
+
+        const addClockCard = document.createElement('div');
+        addClockCard.className = 'card clock-card add-clock';
+        addClockCard.innerText = '+ Add Another Clock';
+        addClockCard.addEventListener('click', () => {
+            addClock();
+        });
+
+        const addClockWrapper = document.createElement('div');
+        addClockWrapper.className = 'card';
+        addClockWrapper.appendChild(addClockCard);
+
+        const clockContainer = document.getElementById('clockContainer');
+
+        if (clockContainer) {
+            clockContainer.appendChild(addClockWrapper);
+        } else {
+            console.error('Clock container not found!');
+        }
+    });
+</script>
+

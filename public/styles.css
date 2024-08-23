@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/images/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #121212;
+}
+
+header {
+    background-color: #121212; /* Solid color for header */
+    height: 15vh; /* 15% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.clock-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.clock-card, .add-clock {
+    border: 1px solid #D8D8D8;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #C0C0C0;
+}
+
+.add-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C1FF14;
+    color: #121212;
+    cursor: pointer;
+}
+
+.time-display {
+    font-size: 1.5rem;
+    color: #0128B0;
+}
+
+.timezone-name {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #2857FF; /* Custom color for the timezone name */
+}
+
+.btn-remove {
+    background-color: #F2420C;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #CC370A;
+}
+
+.clock-card select {
+    margin-top: 10px;
+    background-color: #E7FFA6;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
