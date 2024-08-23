@@ -1,30 +1,36 @@
-<head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="/styles.css">
-</head>
+const timezones = [
+    { label: 'UTC', value: 'UTC', name: 'Coordinated Universal Time' },
+    { label: 'Pacific/Honolulu', value: 'Pacific/Honolulu', name: 'Hawaii' },
+    { label: 'America/Los_Angeles', value: 'America/Los_Angeles', name: 'US Pacific Time' },
+    { label: 'America/Denver', value: 'America/Denver', name: 'US Mountain Time' },
+    { label: 'America/Chicago', value: 'America/Chicago', name: 'US Central Time' },
+    { label: 'America/New_York', value: 'America/New_York', name: 'US Eastern Time (New York)' },
+    { label: 'America/St_Johns', value: 'America/St_Johns', name: 'Newfoundland, CA' },
+    { label: 'America/Sao_Paulo', value: 'America/Sao_Paulo', name: 'São Paulo, Brazil' },
+    { label: 'America/Rio_Branco', value: 'America/Rio_Branco', name: 'Rio Branco, Brazil' },
+    { label: 'America/Fortaleza', value: 'America/Fortaleza', name: 'Fortaleza, Brazil' },
+    { label: 'America/Mexico_City', value: 'America/Mexico_City', name: 'Mexico City, Mexico' },
+    { label: 'America/Cancun', value: 'America/Cancun', name: 'Cancun, Mexico' },
+    { label: 'America/Monterrey', value: 'America/Monterrey', name: 'Monterrey, Mexico' },
+    { label: 'Europe/Dublin', value: 'Europe/Dublin', name: 'Ireland' },
+    { label: 'Europe/London', value: 'Europe/London', name: 'London' },
+    { label: 'Europe/Lisbon', value: 'Europe/Lisbon', name: 'Portugal' },
+    { label: 'Europe/Madrid', value: 'Europe/Madrid', name: 'Madrid, Spain' },
+    { label: 'CET', value: 'CET', name: 'Central European Time (CET)' },
+    { label: 'EET', value: 'EET', name: 'Eastern European Time (EET)' },
+    { label: 'Asia/Jerusalem', value: 'Asia/Jerusalem', name: 'Israel' },
+    { label: 'Europe/Malta', value: 'Europe/Malta', name: 'Malta' },
+    { label: 'Asia/Dubai', value: 'Asia/Dubai', name: 'Dubai' },
+    { label: 'Asia/Kolkata', value: 'Asia/Kolkata', name: 'India (Kolkata)' },
+    { label: 'Australia/Sydney', value: 'Australia/Sydney', name: 'Sydney, Australia' },
+    { label: 'Australia/Melbourne', value: 'Australia/Melbourne', name: 'Melbourne, Australia' },
+    { label: 'Australia/Brisbane', value: 'Australia/Brisbane', name: 'Brisbane, Australia' },
+    { label: 'Australia/Adelaide', value: 'Australia/Adelaide', name: 'Adelaide, Australia' },
+    { label: 'Australia/Perth', value: 'Australia/Perth', name: 'Perth, Australia' },
+    { label: 'Australia/Hobart', value: 'Australia/Hobart', name: 'Hobart, Australia' }
+    // You can add more time zones here as needed
+];
 
-<header>
-    <h1>Consensys Team Time</h1>
-</header>
-
-
-<div class="clock-container" id="clockContainer">
-    <!-- Clock cards will be added here dynamically -->
- </div>
-
- <script>
-    const timezones = [
-        { label: 'UTC', value: 'UTC', name: 'Coordinated Universal Time' },
-        { label: 'America/New_York', value: 'America/New_York', name: 'New York (Eastern)' },
-        { label: 'Europe/London', value: 'Europe/London', name: 'London' },
-        { label: 'Asia/Tokyo', value: 'Asia/Tokyo', name: 'Tokyo' },
-        // Add more timezones here
-        { label: 'Australia/Sydney', value: 'Australia/Sydney', name: 'Sydney' },
-        { label: 'Europe/Paris', value: 'Europe/Paris', name: 'Paris' },
-        // A more extensive list would include all timezones with their corresponding UTC offsets
-    ];
 
     function updateTime(clockElement, timezone) {
         const date = new Date();
@@ -101,7 +107,7 @@
 
         const addClockCard = document.createElement('div');
         addClockCard.className = 'card clock-card add-clock';
-        addClockCard.innerText = '+ Add Another Clock';
+        addClockCard.innerText = '+ Add another clock';
         addClockCard.addEventListener('click', () => {
             addClock();
         });
@@ -118,5 +124,3 @@
             console.error('Clock container not found!');
         }
     });
-</script>
-

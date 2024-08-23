@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Atyp', Arial, sans-serif; /* Apply Atyp font as default */
     margin: 0;
     padding: 0;
     background-image: url('/assets/images/background.png');
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #121212; /* Solid color for header */
+    background-color: #0f0f0f; /* Solid color for header */
     height: 15vh; /* 15% of the viewport height */
     display: flex;
     align-items: center;
@@ -18,8 +18,11 @@ header {
 }
 
 header h1 {
+    font-family: 'Atyp';
+    font-weight: 700;
     margin: 0;
     font-size: 2rem;
+    color: #C1FF14
 }
 
 .clock-container {
@@ -37,29 +40,33 @@ header h1 {
     width: 200px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #C0C0C0;
+    background-color: #F2F2F2; /* Same background color for all cards */
 }
 
 .add-clock {
+    font-family: 'Atyp';
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #C1FF14;
-    color: #121212;
     cursor: pointer;
+    background-color: #C1FF14; /* Background color specific to the "Add Another Clock" card */
 }
 
 .time-display {
+    font-family: 'Atyp';
     font-size: 1.5rem;
     color: #0128B0;
 }
 
+/* Example: Italic text */
 .timezone-name {
+    font-family: 'Atyp';
+    font-weight: 400; /* Regular weight */
+    font-style: italic; /* Italic style */
     margin-top: 5px;
     font-size: 1rem;
-    color: #2857FF; /* Custom color for the timezone name */
+    color: #2857FF;
 }
-
 .btn-remove {
     background-color: #F2420C;
     color: #FFFFFF;
@@ -78,4 +85,71 @@ header h1 {
     border: none;
     padding: 5px;
     border-radius: 3px;
+    width: 100%; /* Ensures the dropdown fits inside the card */
+    box-sizing: border-box; /* Ensures padding is included in the element's width */
 }
+/* Regular */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Regular-BF65727125d5d66e.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Bold-BF65727125c8d1d.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Italic-BF65727125bca9a.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-BoldItalic-BF65727125bbde7.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Medium-BF65727125cee95.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Light-BF65727125c722b.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-Semibold-BF65727125c6f9.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Semibold Italic */
+@font-face {
+    font-family: 'Atyp';
+    src: url('/assets/fonts/AtypDisplayTRIAL-SemiboldItalic-BF65727125d05ac.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Add more font-face declarations as needed for other weights/styles */
