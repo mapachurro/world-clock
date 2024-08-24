@@ -2,7 +2,7 @@ body {
     font-family: 'Atyp', Arial, sans-serif; /* Apply Atyp font as default */
     margin: 0;
     padding: 0;
-    background-image: url('/assets/images/background.png');
+    background-image: url('../assets/images/background.png');
     background-size: cover; /* Ensure the background image covers the entire viewport */
     background-repeat: no-repeat;
     background-position: center center;
@@ -113,7 +113,7 @@ footer {
 /* Regular */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Regular-BF65727125d5d66e.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Regular-BF65727125d5d66e.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
@@ -121,7 +121,7 @@ footer {
 /* Bold */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Bold-BF65727125c8d1d.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Bold-BF65727125c8d1d.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
@@ -129,7 +129,7 @@ footer {
 /* Italic */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Italic-BF65727125bca9a.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Italic-BF65727125bca9a.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
@@ -137,7 +137,7 @@ footer {
 /* Bold Italic */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-BoldItalic-BF65727125bbde7.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-BoldItalic-BF65727125bbde7.otf') format('opentype');
     font-weight: 700;
     font-style: italic;
 }
@@ -145,7 +145,7 @@ footer {
 /* Medium */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Medium-BF65727125cee95.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Medium-BF65727125cee95.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
@@ -153,7 +153,7 @@ footer {
 /* Light */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Light-BF65727125c722b.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Light-BF65727125c722b.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
@@ -161,7 +161,7 @@ footer {
 /* Semibold */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-Semibold-BF65727125c6f9.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Semibold-BF65727125c6f9.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
@@ -169,7 +169,7 @@ footer {
 /* Semibold Italic */
 @font-face {
     font-family: 'Atyp';
-    src: url('/assets/fonts/AtypDisplayTRIAL-SemiboldItalic-BF65727125d05ac.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-SemiboldItalic-BF65727125d05ac.otf') format('opentype');
     font-weight: 600;
     font-style: italic;
 }
