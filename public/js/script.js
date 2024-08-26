@@ -9,6 +9,7 @@ const timezones = [
     { label: 'America/Sao_Paulo', value: 'America/Sao_Paulo', name: 'São Paulo, Brazil' },
     { label: 'America/Rio_Branco', value: 'America/Rio_Branco', name: 'Rio Branco, Brazil' },
     { label: 'America/Fortaleza', value: 'America/Fortaleza', name: 'Fortaleza, Brazil' },
+    { label: 'America/Santiago', value: 'America/Santiago', name: 'Santiago, Chile' },
     { label: 'America/Mexico_City', value: 'America/Mexico_City', name: 'Mexico City, Mexico' },
     { label: 'America/Cancun', value: 'America/Cancun', name: 'Cancun, Mexico' },
     { label: 'America/Monterrey', value: 'America/Monterrey', name: 'Monterrey, Mexico' },
