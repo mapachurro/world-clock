@@ -9,7 +9,6 @@ const timezones = [
     { label: 'America/Sao_Paulo', value: 'America/Sao_Paulo', name: 'São Paulo, Brazil' },
     { label: 'America/Rio_Branco', value: 'America/Rio_Branco', name: 'Rio Branco, Brazil' },
     { label: 'America/Fortaleza', value: 'America/Fortaleza', name: 'Fortaleza, Brazil' },
-    { label: 'America/Santiago', value: 'America/Santiago', name: 'Santiago, Chile' },
     { label: 'America/Mexico_City', value: 'America/Mexico_City', name: 'Mexico City, Mexico' },
     { label: 'America/Cancun', value: 'America/Cancun', name: 'Cancun, Mexico' },
     { label: 'America/Monterrey', value: 'America/Monterrey', name: 'Monterrey, Mexico' },
@@ -23,13 +22,26 @@ const timezones = [
     { label: 'Europe/Malta', value: 'Europe/Malta', name: 'Malta' },
     { label: 'Asia/Dubai', value: 'Asia/Dubai', name: 'Dubai' },
     { label: 'Asia/Kolkata', value: 'Asia/Kolkata', name: 'India (Kolkata)' },
+    { label: 'Europe/Istanbul', value: 'Europe/Istanbul', name: 'Turkey (Istanbul)' },
+    { label: 'Asia/Riyadh', value: 'Asia/Riyadh', name: 'Saudi Arabia (Riyadh)' },
+    { label: 'Asia/Tehran', value: 'Asia/Tehran', name: 'Iran (Tehran, UTC+3:30)' },
+    { label: 'Asia/Karachi', value: 'Asia/Karachi', name: 'Pakistan (Karachi)' },
+    { label: 'Asia/Shanghai', value: 'Asia/Shanghai', name: 'China (Shanghai, Beijing)' },
+    { label: 'Asia/Bangkok', value: 'Asia/Bangkok', name: 'Thailand (Bangkok)' },
+    { label: 'Asia/Kuala_Lumpur', value: 'Asia/Kuala_Lumpur', name: 'Malaysia (Kuala Lumpur)' },
+    { label: 'Asia/Jakarta', value: 'Asia/Jakarta', name: 'Indonesia (Jakarta)' },
+    { label: 'Asia/Seoul', value: 'Asia/Seoul', name: 'South Korea (Seoul)' },
+    { label: 'Asia/Tokyo', value: 'Asia/Tokyo', name: 'Japan (Tokyo)' },
+    { label: 'Europe/Moscow', value: 'Europe/Moscow', name: 'Russia (Moscow, UTC+3)' },
+    { label: 'Asia/Yekaterinburg', value: 'Asia/Yekaterinburg', name: 'Russia (Yekaterinburg, UTC+5)' },
+    { label: 'Asia/Novosibirsk', value: 'Asia/Novosibirsk', name: 'Russia (Novosibirsk, UTC+7)' },
+    { label: 'Asia/Vladivostok', value: 'Asia/Vladivostok', name: 'Russia (Vladivostok, UTC+10)' },
     { label: 'Australia/Sydney', value: 'Australia/Sydney', name: 'Sydney, Australia' },
     { label: 'Australia/Melbourne', value: 'Australia/Melbourne', name: 'Melbourne, Australia' },
     { label: 'Australia/Brisbane', value: 'Australia/Brisbane', name: 'Brisbane, Australia' },
     { label: 'Australia/Adelaide', value: 'Australia/Adelaide', name: 'Adelaide, Australia' },
     { label: 'Australia/Perth', value: 'Australia/Perth', name: 'Perth, Australia' },
     { label: 'Australia/Hobart', value: 'Australia/Hobart', name: 'Hobart, Australia' }
-    // You can add more time zones here as needed
 ];
     function updateTime(clockElement, timezone) {
         const date = new Date();
