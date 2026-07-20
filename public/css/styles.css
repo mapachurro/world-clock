@@ -113,7 +113,7 @@ footer {
 /* Regular */
 @font-face {
     font-family: 'Atyp';
-    src: url('../assets/fonts/AtypDisplayTRIAL-Regular-BF65727125d5d66e.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Regular-BF65727125d566e.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
@@ -129,7 +129,7 @@ footer {
 /* Italic */
 @font-face {
     font-family: 'Atyp';
-    src: url('../assets/fonts/AtypDisplayTRIAL-Italic-BF65727125bca9a.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Italic-BF65727125bac9a.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
@@ -145,7 +145,7 @@ footer {
 /* Medium */
 @font-face {
     font-family: 'Atyp';
-    src: url('../assets/fonts/AtypDisplayTRIAL-Medium-BF65727125cee95.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Medium-BF65727125b8683.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
@@ -161,7 +161,7 @@ footer {
 /* Semibold */
 @font-face {
     font-family: 'Atyp';
-    src: url('../assets/fonts/AtypDisplayTRIAL-Semibold-BF65727125c6f9.otf') format('opentype');
+    src: url('../assets/fonts/AtypDisplayTRIAL-Semibold-BF65727125c6fc9.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
